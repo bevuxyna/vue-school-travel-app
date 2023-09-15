@@ -1,0 +1,9 @@
+<script setup>
+import router from "@/router";
+</script>
+
+<template>
+  <span class="go-back">
+    <button @click="router.back()">Go back</button>
+  </span>
+</template>

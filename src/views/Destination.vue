@@ -1,28 +1,18 @@
 <script setup>
-import { computed, onBeforeMount, ref } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
+import sourceData from "@/data.json";
 
 const route = useRoute();
-const destination = ref(null);
 
 const denstinationId = computed(() => {
   return parseInt(route.params.id);
 });
 
-// const destination = computed(() => {
-//   return sourceData.destinations.find(
-//     (destination) => destination.id === denstinationId.value
-//   );
-// });
-
-const getData =() => {
-  fetch(`https://travel-dummy-api.netlify.app/${route.params.slug}.json`)
-    .then((response) => response.json())
-    .then((data) => (destination.value = data));
-};
-
-onBeforeMount(() => {
-  destination.value = getData();
+const destination = computed(() => {
+  return sourceData.destinations.find(
+    (destination) => destination.id === denstinationId.value
+  );
 });
 </script>
 

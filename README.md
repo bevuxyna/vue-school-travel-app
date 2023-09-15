@@ -1,14 +1,15 @@
-# vue-project
+# Travel App
 
-This template should help get you started developing with Vue 3 in Vite.
+SPA приложение, разработанное в рамках изучения Vue Roter в [Vue School](https://vueschool.io/courses/vue-router-4-for-everyone).
 
-## Recommended IDE Setup
+Во время разработки приложения было изучено:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+* Как создавать маршруты, включая именованные маршруты.
+* Как отложенно загружать маршруты.
+* Как работать с параметрами Vue Router и передавать их в качестве свойств компонентам.
+* Как создавать динамические и вложенные маршруты
+* Как создать страницу 404 с помощью Vue Router
+* Как работать с маршрутизатором Vue в тандеме с API Vue Composition API
 
 ## Project Setup
 

@@ -1,13 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { useRoute } from "vue-router";
 import Navigation from "@/components/Navigation.vue";
+
+const route = useRoute();
 </script>
 
 <template>
   <Navigation />
 
   <div class="container">
-    <router-view></router-view>
+    <router-view :key="route.path"></router-view>
   </div>
 </template>
 

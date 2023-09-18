@@ -9,9 +9,23 @@ const routes = [
     component: Home,
   },
   {
+    path: "/protected",
+    name: "protected",
+    component: () => import("@/views/Protected.vue"),
+    meta: {
+      requireAuth: true,
+    }
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "notFound",
     component: () => import("@/views/NotFound.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/Login.vue"),
+
   },
   {
     path: "/destination/:id/:slug",
@@ -48,6 +62,14 @@ const router = createRouter({
   scrollBehavior (to, from, savedPosition) {
     return savedPosition || { top: 0 }
   }
+});
+
+router.beforeEach((to, from) => {
+  if (to.meta.requireAuth && !window.user) {
+    return { name: "login" }
+
+  }
+
 });
 
 export default router;

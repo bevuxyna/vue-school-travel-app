@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
-import router from "@/router";
+import { useRouter } from "vue-router";
 
 const username = ref(window.user);
+const router = useRouter();
 
 const logout = () => {
   window.user = null;

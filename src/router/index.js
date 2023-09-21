@@ -7,6 +7,7 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
+    alias: '/home'
   },
   {
     path: "/protected",
